@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Controllers;
+using System.Web.Http.Dispatcher;
 using System.Web.Security;
 using System.Web.SessionState;
 using Newtonsoft.Json;
@@ -25,6 +28,8 @@ namespace JahPaukstis
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             };
+
+            GlobalConfiguration.Configuration.Services.Replace(typeof(IHttpControllerActivator), new CompositionRoot());
         }
 
         protected void Session_Start(object sender, EventArgs e)
@@ -55,6 +60,15 @@ namespace JahPaukstis
         protected void Application_End(object sender, EventArgs e)
         {
 
+        }
+    }
+
+    public class CompositionRoot:IHttpControllerActivator
+    {
+        public IHttpController Create(HttpRequestMessage request, HttpControllerDescriptor controllerDescriptor, Type controllerType)
+        {
+            if (controllerType ==  typeof(ChannelsController)) return new ChannelsController(new InMemoryChannelMessageStorage());
+            throw new Exception("Unknown controller type: " + controllerType);
         }
     }
 }

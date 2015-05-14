@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JahPaukstis.AcceptanceTests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JahPaukstis", "src\JahPaukstis\JahPaukstis.csproj", "{4441CEA0-828B-4578-AD10-2334110067B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JahPaukstis.Tests", "JahPaukstis.Tests\JahPaukstis.Tests.csproj", "{7B5E553F-596A-4660-A0BA-B60502F22061}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4441CEA0-828B-4578-AD10-2334110067B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4441CEA0-828B-4578-AD10-2334110067B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4441CEA0-828B-4578-AD10-2334110067B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5E553F-596A-4660-A0BA-B60502F22061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5E553F-596A-4660-A0BA-B60502F22061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5E553F-596A-4660-A0BA-B60502F22061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5E553F-596A-4660-A0BA-B60502F22061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

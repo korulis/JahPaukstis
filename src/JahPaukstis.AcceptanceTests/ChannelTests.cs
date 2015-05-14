@@ -31,6 +31,7 @@ namespace JahPaukstis.AcceptanceTests
 
         [Theory]
         [InlineData("labs")]
+        [InlineData("hello")]
         public void ServerReturnPostedMessage(string postMessageContent)
         {
             var channelName = Guid.NewGuid().ToString();
